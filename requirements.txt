@@ -1,1 +1,7 @@
 streamlit
+tensorflow==2.18.0
+googlemaps
+geopy
+requests
+pillow
+numpy
