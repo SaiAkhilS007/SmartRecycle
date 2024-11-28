@@ -24,7 +24,6 @@ CLASSIFIER_MODEL_PATH = "model/Resnet_Neural_Network_model.h5"
 
 # Initialize API keys and clients
 google_api_key = "AIzaSyANESeNA-wRkwU3XIDekR2gLaQ63cEeVos"
-custom_search_engine_id = "c784b70b531b748dc"
 youtube_api_key = "AIzaSyCWGmxXEGYDvNYwOs2lNG8hZKMpmUGhfcY"
 gmaps = googlemaps.Client(key=google_api_key)
 
@@ -37,18 +36,6 @@ model = load_model(CLASSIFIER_MODEL_PATH)
 
 # Load ResNet50 feature extractor
 feature_extractor = ResNet50(weights="imagenet", include_top=False, pooling="avg")
-
-
-def fetch_top_articles(waste_category, intent):
-    query = f"{waste_category} {intent} tips"
-    url = f"https://www.googleapis.com/customsearch/v1?q={query}&cx={custom_search_engine_id}&key={google_api_key}"
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        results = response.json().get("items", [])
-        return [{"title": item.get("title"), "link": item.get("link")} for item in results[:3]]
-    except Exception as e:
-        return []
 
 
 def fetch_top_youtube_videos(waste_category, intent):
@@ -132,12 +119,7 @@ if uploaded_file is not None:
 
     # Reuse and Recycle functionality
     if st.session_state.intent in ["reuse", "recycle"]:
-        articles = fetch_top_articles(category, st.session_state.intent)
         videos = fetch_top_youtube_videos(category, st.session_state.intent)
-
-        st.subheader("📚 Articles:")
-        for article in articles:
-            st.write(f"[{article['title']}]({article['link']})")
 
         st.subheader("🎥 Video Tutorials:")
         for video in videos:
