@@ -1,19 +1,13 @@
-# 🎈 Blank app template
-
-A simple Streamlit app template for you to modify!
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+# SmartRecycle 
+- Streamlit :
+## Introduction
+The lack of accessible tools for segregating waste and finding immediate recycling or reuse solutions leaves individuals unaware of simple steps they can take. Additionally, locating nearby drop-off points for waste types like organic, e-waste, and medical waste remains challenging. The absence of a platform that connects users with disposal facilities and provides instant reuse or recycling ideas inspired us to create a solution for better waste management practices.
+### Objective
+- Use Traditional ML models, Ensemble models and Deep Learning Models to classify waste images into categories like plastic, metal, or organic categories.
+- Provide recycling suggestions, reuse ideas, and safe disposal methods for hazardous or non-recyclable waste.
+- Suggest nearby recycling centers or drop-off points using geolocation and mapping tools.
+## Research Questions
+- Research Question 1: How can image classification models be optimized to accurately categorize waste into distinct categories for better waste management 
+  practices?
+- Research Question 2: How can location-based services and predictive models be integrated to suggest optimal waste disposal options based on user location and 
+  waste type?
