@@ -51,3 +51,8 @@ Image Counts by Category:
 ## Voting classifier results 
 
   <img src = "Visualizations/voting classifier.jpg" width = "800" height ="150" />
+
+## This table compares the performance of three deep learning models: DenseNet, InceptionV3, and ResNet
+
+ <img src = "Visualizations/deeplearning.jpg" width ="800" height = " 1000" />
+
