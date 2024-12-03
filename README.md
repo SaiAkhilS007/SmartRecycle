@@ -60,6 +60,6 @@ From the above table we can conclude ResNet achieved the highest test accuracy
 
 ##Model accuracy of RESNET
 
-<img src = "Visualizations/resnetmodelresults.jpg" width ="500" height ="400"/>
+<img src = "Visualizations/resnetmodelaccuracy.jpg" width ="500" height ="400"/>
 
 
