@@ -13,7 +13,7 @@ The lack of accessible tools for segregating waste and finding immediate recycli
   waste type?
 ## Data Source
 Data set has been downloaded from this URL titled "ImageNet" : https://www.image-net.org/index.php
- **Main categories chosen(Images)**
+- **Main categories chosen(Images)**
 -  *Wood*
 -  *cardboard*
 -  *e-waste*
