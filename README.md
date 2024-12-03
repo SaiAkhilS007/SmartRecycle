@@ -71,3 +71,14 @@ The deep learning models, however, outperformed traditional and ensemble approac
 
 
 
+
+Top 3 YouTube recommendations for reusing Plastic (Cosine Similarity):
+Title: DIY TOY Super creative smart recycling ideas/waste plastic diy craft ideas/plastic hacks/tiktokviral, Cosine Similarity: 0.2424, URL: https://www.youtube.com/watch?v=uYYZTMjE9pA
+Title: Clever ways to reuse and recycle empty plastic bottles, Cosine Similarity: 0.2009, URL: https://www.youtube.com/watch?v=O7JkFJXcOKM
+Title: 4 Brilliant Ideas From Plastic Cans! Don&#39;t Throw Away Empty Cans!!!, Cosine Similarity: 0.1833, URL: https://www.youtube.com/watch?v=sGl1eihw4cE
+
+Top 3 YouTube recommendations for reusing Plastic (Euclidean Similarity):
+Title: DIY TOY Super creative smart recycling ideas/waste plastic diy craft ideas/plastic hacks/tiktokviral, Euclidean Similarity: 0.4482, URL: https://www.youtube.com/watch?v=uYYZTMjE9pA
+Title: Clever ways to reuse and recycle empty plastic bottles, Euclidean Similarity: 0.4417, URL: https://www.youtube.com/watch?v=O7JkFJXcOKM
+Title: 4 Brilliant Ideas From Plastic Cans! Don&#39;t Throw Away Empty Cans!!!, Euclidean Similarity: 0.4390, URL: https://www.youtube.com/watch?v=sGl1eihw4cE
+
