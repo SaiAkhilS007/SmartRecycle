@@ -168,13 +168,17 @@ helping end-users access recycling and reuse ideas more effectively while promot
 ### 3. Expanding Geographic Coverage for Drop-Off Locations
 Currently, drop-off location recommendations are region-specific(Baltimore). Expanding the database to include global locations will make the system more universally applicable, helping users worldwide to find the nearest waste disposal facilities.
 
+## 🏁 Conclusion
+
+Our project successfully demonstrates how AI-powered solutions can simplify waste management by combining deep learning models, location-based services, and personalized recommendations. With **94% test accuracy using ResNet**, the system accurately classifies waste into predefined categories. It empowers users with creative reuse ideas, proper recycling methods, and guidance to nearby disposal facilities.
+
+This project is a step toward promoting sustainable practices and reducing environmental impact. By making waste disposal and recycling more accessible and user-friendly, we hope to inspire individuals and communities to take meaningful actions for a cleaner and greener future.
 
 ## How to use the product(Stream lit)?
 
 - Upload single piece of waste and only a single image picture
 - Click on either reuse,recycle or disposal
 - Give the Zipcode of the area you want to dispose the product
-
 ### Note : Only upload a single image category/piece of waste for the best results
 
 
