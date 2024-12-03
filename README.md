@@ -123,7 +123,6 @@ The following graphs illustrate the training and validation accuracy and loss ov
 
 ---
 
-**Conclusion**: ResNet is the most reliable and accurate model for our project, effectively balancing training and validation performance.
 
 
 ## 🎥 YouTube Recommendations for Reuse or Recycle
