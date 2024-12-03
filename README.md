@@ -42,4 +42,4 @@ Image Counts by Category:
   
 ## Ensemble models Tackled
 
-  <img src="Visualizations/ensemble.jpg" width ="500" height = "400" />
+  <img src="Visualizations/" width ="500" height = "400" />
