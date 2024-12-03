@@ -58,8 +58,10 @@ Image Counts by Category:
 
 From the above table we can conclude ResNet achieved the highest test accuracy (94%) and consistent metrics (Precision, Recall, and F1 Score: 0.94), making it the best overall model.
 
-##Model accuracy of RESNET
+## Model results of RESNET
 
 <img src = "Visualizations/resnetmodelaccuracy.jpg" width ="500" height ="400"/>
+
+<img src = "Visualizations/resnetloss.jpg" width = "500" height = "400"/>
 
 
