@@ -173,7 +173,7 @@ helping end-users access recycling and reuse ideas more effectively while promot
 Currently, drop-off location recommendations are region-specific(Baltimore). Expanding the database to include global locations will make the system more universally applicable, helping users worldwide to find the nearest waste disposal facilities.
 
 
-##How to use the product?
+## How to use the product?
 
 - Upload single piece of waste and only a single image picture
 - Click on either reuse,recycle or disposal
