@@ -36,6 +36,6 @@ Image Counts by Category:
 - metal: Main = 2259, Augmented = 0, Total = 2259
 - Wood: Main = 347, Augmented = 2111, Total = 2458
 ##Machinelearning models applied
-  <img src="Visualizations/Recall.png" width="500" height="500" />  
+  <img src="Visualizations/mlmodels.jpg" width="500" height="500" />  
 
 
