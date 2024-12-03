@@ -18,7 +18,7 @@ The objective of this project is to develop an AI-powered system that simplifies
   waste type?
 ## Data Source
 Data set has been downloaded from this URL titled "ImageNet" : https://www.image-net.org/index.php
-https://huggingface.co/datasets/garythung/trashnet/tree/main
+
 - **Different Categories Of Waste Selected**
   1) *Wood*
   2) *cardboard*
