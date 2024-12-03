@@ -14,14 +14,14 @@ The lack of accessible tools for segregating waste and finding immediate recycli
 ## Data Source
 Data set has been downloaded from this URL titled "ImageNet" : https://www.image-net.org/index.php
 - **Main categories chosen(Images)**
--  1) *Wood*
--  2) *cardboard*
--  3) *e-waste*
--  4) *glass*
--  5) *medical*
--  6) *metal*
--  7) *paper*
--  8) *plastic*
+  1) *Wood*
+  2) *cardboard*
+  3) *e-waste*
+  4) *glass*
+  5) *medical*
+  6) *metal*
+  7) *paper*
+  8) *plastic*
 ## Data Augmentation
 
 
