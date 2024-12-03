@@ -160,5 +160,20 @@ This feature helps users find the nearest drop-off locations for waste disposal 
      - Supported waste categories.
      - Coordinates for accurate location mapping.
 
+## 🔮 Future Enhancements
+
+### 1. Multi-Label Classification for Mixed Waste
+The current model predicts a single category of waste. A future enhancement could involve implementing multi-label classification to identify multiple waste types in a single image. This will enable better handling of mixed materials, such as a plastic bottle with a paper label.
+
+### 2. Real-Time Mobile Application Development
+To make the system accessible on the go, a mobile application can be developed. By converting the model to a mobile-friendly format (e.g., TensorFlow Lite), users can upload images and receive real-time predictions directly from their smartphones.
+
+### 3. Expanding Geographic Coverage for Drop-Off Locations
+Currently, drop-off location recommendations are region-specific. Expanding the database to include global locations will make the system more universally applicable, helping users worldwide to find the nearest waste disposal facilities.
+
+### 4. Incorporating Multi-Language Support
+To increase accessibility, future iterations could include multi-language support. This would allow users from diverse linguistic backgrounds to receive recommendations, guides, and instructions in their preferred language, making the platform truly global.
+
+
 
 
