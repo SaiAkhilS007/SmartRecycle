@@ -11,11 +11,6 @@ The lack of accessible tools for segregating waste and finding immediate recycli
 
 The objective of this project is to develop an AI-powered system that simplifies waste management by classifying waste images, providing personalized reuse or recycling recommendations, and guiding users to the nearest drop-off locations. It aims to reduce environmental impact, and make waste disposal more accessible and user-friendly.
 
-## Research Questions
-- Research Question 1: How can image classification models be optimized to accurately categorize waste into distinct categories for better waste management 
-  practices?
-- Research Question 2: How can location-based services and predictive models be integrated to suggest optimal waste disposal options based on user location and 
-  waste type?
 ## Data Source
 Data set has been downloaded from this URL titled "ImageNet" : https://www.image-net.org/index.php
 
