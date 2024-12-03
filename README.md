@@ -88,6 +88,43 @@ Image Counts by Category:
 
 From the above table we can conclude ResNet achieved the highest test accuracy (94%) and consistent metrics (Precision, Recall, and F1 Score: 0.94), making it the best overall model.
 
+## 📈 Best Performing Model Results: ResNet
+
+ResNet achieved the best performance among all tested models with **99% training accuracy** and **94% test accuracy**. Below are the detailed performance metrics and learning curves of the model:
+
+#### **Performance Metrics**
+- **Train Accuracy**: 99%
+- **Test Accuracy**: 94%
+- **Precision**: 0.94
+- **Recall**: 0.94
+- **F1 Score**: 0.94
+
+#### **Learning Curves**
+The following graphs illustrate the training and validation accuracy and loss over 50 epochs.
+
+- **Model Accuracy**:
+  - Training accuracy steadily improves and stabilizes around 98%-99%.
+  - Validation accuracy remains consistently high at approximately 94%.
+
+<img src="Visualizations/resnetmodelaccuracy.jpg" width ="500" height = "400" />
+
+
+- **Model Loss**:
+  - Training loss decreases sharply and stabilizes at very low levels.
+  - Validation loss fluctuates slightly but remains low, demonstrating good generalization.
+
+<img src="Visualizations/resnetloss.jpg" width ="500" height = "400" />
+
+
+#### **Key Observations**
+- ResNet’s residual connections helped the model learn effectively even with a deep architecture.
+- The minimal gap between training and validation performance indicates low overfitting, making it suitable for waste classification tasks.
+
+---
+
+**Conclusion**: ResNet is the most reliable and accurate model for our project, effectively balancing training and validation performance.
+
+
 ## 🎥 YouTube Recommendations for Reuse or Recycle
 
 This feature provides personalized YouTube video suggestions to help users creatively reuse or properly recycle waste products based on the predicted waste category.
