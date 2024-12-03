@@ -88,7 +88,7 @@ From the above table we can conclude ResNet achieved the highest test accuracy
 
 This feature provides personalized YouTube video suggestions to help users creatively reuse or properly recycle waste products based on the predicted waste category.
 
-#### **How It Works**
+### **How It Works**
 1. **Reuse Recommendations**:
    - Users receive the **top 3 YouTube videos** for creative reuse ideas (e.g., DIY crafts, upcycling projects) by entering keywords relevant to the waste type.
 
@@ -98,7 +98,26 @@ This feature provides personalized YouTube video suggestions to help users creat
 3. **Personalized Ranking**:
    - Video suggestions are ranked using **cosine similarity** or **Euclidean similarity**, ensuring the most relevant and practical recommendations for users.
 
-#### **Code Example**
+## 📍 Overview of Drop-Off Locations & Data Preparation
+
+This feature helps users find the nearest drop-off locations for waste disposal based on their zip code and the predicted waste category. The system uses a preloaded database of categorized drop-off locations and integrates with the **Google Maps API** to calculate the closest facility for the user.
+
+### **How It Works**
+1. **Categorized Database**:
+   - Drop-off locations are pre-categorized based on waste types (e.g., e-waste, medical waste, recyclable items).
+   - Data includes details like name, address, phone number, coordinates (latitude, longitude), and working hours.
+
+2. **User Location Matching**:
+   - Users provide their zip code, and the **Google Maps API** is used to convert the zip code into geographical coordinates.
+
+3. **Nearest Location Calculation**:
+   - Using **K-Nearest Neighbors (KNN)**, the system finds the closest drop-off facility that matches the waste category.
+
+4. **Prepared Dataset**:
+   - The dataset is stored in a CSV format and includes:
+     - Drop-off facility name, address, and contact details.
+     - Supported waste categories.
+     - Coordinates for accurate location mapping.
 
 
 
