@@ -56,3 +56,10 @@ Image Counts by Category:
 
  <img src = "Visualizations/deeplearning.jpg" width ="1000" height = "380" />
 
+From the above table we can conclude ResNet achieved the highest test accuracy (94%) and consistent metrics (Precision, Recall, and F1 Score: 0.94), making it the best overall model.
+
+##Model accuracy of RESNET
+
+<img src = "Visualizations/resnetmodelresults.jpg" width ="500" height ="400"/>
+
+
