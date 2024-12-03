@@ -47,4 +47,7 @@ Image Counts by Category:
 ## Ensemble models results
 
   <img src = "Visualizations/ensembleresults.jpg" width = "800" height = "200" />
-  
+
+## Voting classifier results 
+
+  <img src = "Visualizations/Voting.jpg" width = "800" height ="200" />
