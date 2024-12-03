@@ -36,7 +36,6 @@ Image Counts by Category:
 - metal: Main = 2259, Augmented = 0, Total = 2259
 - Wood: Main = 347, Augmented = 2111, Total = 2458
   
-## Machinelearning models Tackled with results
 
   ### Model Performance: Traditional Machine Learning Models
 
@@ -54,17 +53,34 @@ Image Counts by Category:
 
   <img src="Visualizations/ensemble.jpg" width ="500" height = "400" />
 
-## Ensemble models results
+### Model Performance: Ensemble Models
 
-  <img src = "Visualizations/ensembleresults.jpg" width = "800" height = "200" />
+| **Model Used**       | **Features Extracted Using** | **Train Accuracy** | **Test Accuracy** | **Precision** | **Recall** | **F1 Score** |
+|-----------------------|------------------------------|---------------------|--------------------|---------------|------------|--------------|
+| Random Forest         | InceptionV3                | 91%                | 82%                | 0.84          | 0.82       | 0.82         |
+| Random Forest         | DenseNet121                | 99%                | 72%                | 0.72          | 0.70       | 0.70         |
+| XGBoost               | InceptionV3                | 100%               | 90%                | 0.90          | 0.90       | 0.90         |
+| XGBoost               | DenseNet121                | 95%                | 87%                | 0.88          | 0.88       | 0.88         |
+| AdaBoost              | InceptionV3                | 63%                | 62%                | 0.62          | 0.62       | 0.62         |
+| AdaBoost              | DenseNet121                | 69%                | 67%                | 0.68          | 0.68       | 0.67         |
 
-## Voting classifier results 
 
-  <img src = "Visualizations/voting classifier.jpg" width = "800" height ="150" />
+### Model Performance: Hybrid Models (SVM + XGBoost)
 
-## This table compares the performance of three deep learning models: DenseNet, InceptionV3, and ResNet
+| **Model Used**       | **Features Extracted Using** | **Train Accuracy** | **Test Accuracy** | **Precision** | **Recall** | **F1 Score** |
+|-----------------------|------------------------------|---------------------|--------------------|---------------|------------|--------------|
+| SVM + XGBoost         | InceptionV3                | 99%                | 92%                | 0.92          | 0.92       | 0.92         |
+| SVM + XGBoost         | DenseNet121                | 93.3%              | 92%                | 0.93          | 0.93       | 0.93         |
 
- <img src = "Visualizations/deeplearning.jpg" width ="1000" height = "380" />
+
+### Model Performance and Architecture Overview: Deep Learning Models
+
+| **Model Used**       | **Overview of the Model**                                                                                                                                                                                                                       | **Train Accuracy** | **Test Accuracy** | **Precision** | **Recall** | **F1 Score** |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|--------------------|---------------|------------|--------------|
+| **DenseNet**          | Input Layer: Receives images of size (244, 244, 3). Hidden Layers: The output of the DenseNet201 convolutional layers is passed through a GlobalAveragePooling2D layer to reduce spatial dimensions (224x224x3 → 1x1x1024). Then, it goes through a Dropout layer (rate 0.3) to prevent overfitting, followed by a Dense layer (num_classes neurons → softmax activation). Output Layer: Outputs a probability distribution with num_classes neurons using softmax activation for multi-class classification. | 89%                | 89%               | 0.89          | 0.89       | 0.89         |
+| **Inception V3**      | Input Layer: The model receives images of size (299, 299, 3). Hidden Layers: The output from the InceptionV3 convolutional layers is passed through a GlobalAveragePooling2D layer to reduce spatial dimensions (from 299x299xchannels to a 1D vector). Next, a Dropout layer with a rate of 0.3 is applied to minimize overfitting, followed by a Dense layer with num_classes neurons and a softmax activation function. Output Layer: Produces a probability distribution across num_classes categories, using softmax activation for multi-class classification. | 95%                | 90%               | 0.95          | 0.95       | 0.95         |
+| **ResNet**            | Input Layer: Receives images of size (224, 224, 3) and processes them through a series of residual blocks with skip connections to maintain information flow and support deeper learning. Feature Extraction: Uses a GlobalAveragePooling2D layer to compress spatial dimensions (e.g., 7x7x2048 → 1x1x2048) and a Dropout layer (rate 0.3) to minimize overfitting. Output Layer: A final Dense layer with num_classes neurons applies softmax activation to produce probabilities for multi-class classification, selecting the most likely waste category. | 99%                | 94%               | 0.94          | 0.94       | 0.94         |
+
 
 From the above table we can conclude ResNet achieved the highest test accuracy (94%) and consistent metrics (Precision, Recall, and F1 Score: 0.94), making it the best overall model.
 
