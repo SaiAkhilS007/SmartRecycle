@@ -38,7 +38,17 @@ Image Counts by Category:
   
 ## Machinelearning models Tackled with results
 
-  <img src="Visualizations/mlmodels.jpg" width="800" height="200" />  
+  ### Model Performance: Traditional Machine Learning Models
+
+| **Model Used**       | **Features Extracted Using** | **Train Accuracy** | **Test Accuracy** | **F1 Score** | **Precision** | **Recall** |
+|-----------------------|------------------------------|---------------------|--------------------|--------------|---------------|------------|
+| Logistic Regression   | InceptionV3                | 100%               | 90%                | 0.90         | 0.90          | 0.90       |
+| Logistic Regression   | DenseNet121                | 93%                | 85%                | 0.85         | 0.85          | 0.85       |
+| Decision Tree         | InceptionV3                | 65%                | 62%                | 0.69         | 0.62          | 0.64       |
+| Decision Tree         | DenseNet121                | 99%                | 31%                | 0.33         | 0.31          | 0.31       |
+| SVM                   | InceptionV3                | 100%               | 90%                | 0.90         | 0.90          | 0.90       |
+| SVM                   | DenseNet121                | 92%                | 91%                | 0.91         | 0.91          | 0.91       |
+ 
   
 ## Ensemble models Tackled
 
@@ -82,11 +92,3 @@ Title: DIY TOY Super creative smart recycling ideas/waste plastic diy craft idea
 Title: Clever ways to reuse and recycle empty plastic bottles, Euclidean Similarity: 0.4417, URL: https://www.youtube.com/watch?v=O7JkFJXcOKM
 Title: 4 Brilliant Ideas From Plastic Cans! Don&#39;t Throw Away Empty Cans!!!, Euclidean Similarity: 0.4390, URL: https://www.youtube.com/watch?v=sGl1eihw4cE
 
-### 📊 Model Performance
-| Model Type         | Feature Extractor | Train Accuracy | Test Accuracy | Precision | Recall | F1 Score |
-|--------------------|-------------------|----------------|---------------|-----------|--------|----------|
-| Logistic Regression | DenseNet121       | 93%            | 85%           | 0.85      | 0.85   | 0.85     |
-| SVM                | DenseNet121       | 92%            | 91%           | 0.91      | 0.91   | 0.91     |
-| ResNet             | ResNet Features   | 99%            | 94%           | 0.94      | 0.94   | 0.94     |
-
----
