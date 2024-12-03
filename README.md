@@ -37,7 +37,7 @@ Image Counts by Category:
 - Wood: Main = 347, Augmented = 2111, Total = 2458
   
 
-  ### Model Performance: Traditional Machine Learning Models
+## Model Performance: Traditional Machine Learning Models
 
 | **Model Used**       | **Features Extracted Using** | **Train Accuracy** | **Test Accuracy** | **F1 Score** | **Precision** | **Recall** |
 |-----------------------|------------------------------|---------------------|--------------------|--------------|---------------|------------|
@@ -53,7 +53,7 @@ Image Counts by Category:
 
   <img src="Visualizations/ensemble.jpg" width ="500" height = "400" />
 
-### Model Performance: Ensemble Models
+## Model Performance: Ensemble Models
 
 | **Model Used**       | **Features Extracted Using** | **Train Accuracy** | **Test Accuracy** | **Precision** | **Recall** | **F1 Score** |
 |-----------------------|------------------------------|---------------------|--------------------|---------------|------------|--------------|
@@ -65,7 +65,7 @@ Image Counts by Category:
 | AdaBoost              | DenseNet121                | 69%                | 67%                | 0.68          | 0.68       | 0.67         |
 
 
-### Model Performance: Hybrid Models (SVM + XGBoost)
+## Model Performance: Hybrid Models (SVM + XGBoost)
 
 | **Model Used**       | **Features Extracted Using** | **Train Accuracy** | **Test Accuracy** | **Precision** | **Recall** | **F1 Score** |
 |-----------------------|------------------------------|---------------------|--------------------|---------------|------------|--------------|
@@ -73,7 +73,7 @@ Image Counts by Category:
 | SVM + XGBoost         | DenseNet121                | 93.3%              | 92%                | 0.93          | 0.93       | 0.93         |
 
 
-### Model Performance and Architecture Overview: Deep Learning Models
+## Model Performance and Architecture Overview: Deep Learning Models
 
 | **Model Used**       | **Overview of the Model**                                                                                                                                                                                                                       | **Train Accuracy** | **Test Accuracy** | **Precision** | **Recall** | **F1 Score** |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|--------------------|---------------|------------|--------------|
