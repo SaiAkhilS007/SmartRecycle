@@ -12,7 +12,7 @@ The lack of accessible tools for segregating waste and finding immediate recycli
 - Research Question 2: How can location-based services and predictive models be integrated to suggest optimal waste disposal options based on user location and 
   waste type?
 ## Data Source
--  Data set has been downloaded from this URL titled "ImageNet" : https://www.image-net.org/index.php
+Data set has been downloaded from this URL titled "ImageNet" : https://www.image-net.org/index.php
  **Main categories chosen(Images)**
 -  *Wood*
 -  *cardboard*
