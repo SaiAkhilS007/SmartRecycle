@@ -54,5 +54,5 @@ Image Counts by Category:
 
 ## This table compares the performance of three deep learning models: DenseNet, InceptionV3, and ResNet
 
- <img src = "Visualizations/deeplearning.jpg" width ="1000" height = "300" />
+ <img src = "Visualizations/deeplearning.jpg" width ="1000" height = "380" />
 
