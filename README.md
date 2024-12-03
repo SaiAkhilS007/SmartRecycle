@@ -50,4 +50,4 @@ Image Counts by Category:
 
 ## Voting classifier results 
 
-  <img src = "Visualizations/Voting.jpg" width = "800" height ="200" />
+  <img src = "Visualizations/voting classifier.jpg" width = "800" height ="200" />
