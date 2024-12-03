@@ -35,8 +35,11 @@ Image Counts by Category:
 - textiles: Main = 335, Augmented = 2155, Total = 2490
 - metal: Main = 2259, Augmented = 0, Total = 2259
 - Wood: Main = 347, Augmented = 2111, Total = 2458
-##Machinelearning models applied
+  
+## Machinelearning models Tackled with results
 
   <img src="Visualizations/mlmodels.jpg" width="800" height="200" />  
+  
+## Ensemble models Tackled
 
-
+  <img src="Visualizations/ensemble.jpg" width ="500" height = "200" />
