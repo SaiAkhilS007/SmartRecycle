@@ -82,3 +82,11 @@ Title: DIY TOY Super creative smart recycling ideas/waste plastic diy craft idea
 Title: Clever ways to reuse and recycle empty plastic bottles, Euclidean Similarity: 0.4417, URL: https://www.youtube.com/watch?v=O7JkFJXcOKM
 Title: 4 Brilliant Ideas From Plastic Cans! Don&#39;t Throw Away Empty Cans!!!, Euclidean Similarity: 0.4390, URL: https://www.youtube.com/watch?v=sGl1eihw4cE
 
+### 📊 Model Performance
+| Model Type         | Feature Extractor | Train Accuracy | Test Accuracy | Precision | Recall | F1 Score |
+|--------------------|-------------------|----------------|---------------|-----------|--------|----------|
+| Logistic Regression | DenseNet121       | 93%            | 85%           | 0.85      | 0.85   | 0.85     |
+| SVM                | DenseNet121       | 92%            | 91%           | 0.91      | 0.91   | 0.91     |
+| ResNet             | ResNet Features   | 99%            | 94%           | 0.94      | 0.94   | 0.94     |
+
+---
