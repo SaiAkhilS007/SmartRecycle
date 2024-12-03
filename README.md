@@ -67,7 +67,7 @@ From the above table we can conclude ResNet achieved the highest test accuracy
 
 ### Research Question 1: How can image classification models be optimized to accurately categorize waste into distinct categories for better waste management practices?
 
-#The deep learning models, however, outperformed traditional and ensemble approaches. ResNet achieved the highest test accuracy of 94% with balanced metrics (Precision, Recall, and F1 Score: 0.94), making it the most reliable model. While InceptionV3 and DenseNet showed strong performance.
+# The deep learning models, however, outperformed traditional and ensemble approaches. ResNet achieved the highest test accuracy of 94% with balanced metrics (Precision, Recall, and F1 Score: 0.94), making it the most reliable model. While InceptionV3 and DenseNet showed strong performance.
 
 
 
