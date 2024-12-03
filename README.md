@@ -173,7 +173,7 @@ Currently, drop-off location recommendations are region-specific(Baltimore). Exp
 
 - Upload single piece of waste and only a single image picture
 - Click on either reuse,recycle or disposal
-- Choose the mile radius of where to dispose
+- Give the Zipcode of the area you want to dispose the product
 
 ### Note : Only upload a single image category/piece of waste for the best results
 
