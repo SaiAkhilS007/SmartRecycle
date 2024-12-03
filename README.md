@@ -84,6 +84,22 @@ Image Counts by Category:
 
 From the above table we can conclude ResNet achieved the highest test accuracy (94%) and consistent metrics (Precision, Recall, and F1 Score: 0.94), making it the best overall model.
 
+## 🎥 YouTube Recommendations for Reuse or Recycle
+
+This feature provides personalized YouTube video suggestions to help users creatively reuse or properly recycle waste products based on the predicted waste category.
+
+#### **How It Works**
+1. **Reuse Recommendations**:
+   - Users receive the **top 3 YouTube videos** for creative reuse ideas (e.g., DIY crafts, upcycling projects) by entering keywords relevant to the waste type.
+
+2. **Recycle Recommendations**:
+   - Provides videos explaining proper recycling techniques specific to the waste category.
+
+3. **Personalized Ranking**:
+   - Video suggestions are ranked using **cosine similarity** or **Euclidean similarity**, ensuring the most relevant and practical recommendations for users.
+
+#### **Code Example**
+
 
 
 ## Research Question 1: How can image classification models be optimized to accurately categorize waste into distinct categories for better waste management practices?
