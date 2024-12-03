@@ -9,8 +9,8 @@ import requests
 from geopy.distance import geodesic
 import tensorflow as tf
 
-# Force TensorFlow to use CPU
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 
 # Set page configuration
 st.set_page_config(
