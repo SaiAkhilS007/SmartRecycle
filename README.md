@@ -1,6 +1,6 @@
 # SmartRecycle 
 
-## Ever wondered how to reuse a waste item and where to dispose it quickly? Our app helps you to find the simpler ways to recycle and helps you to identify the nearest disposal centers,Well if you live baltimore you can use our app and get ideas quickly
+## Ever wondered how to reuse a waste item and where to dispose it quickly? Our app helps you to find the simpler ways to recycle and helps you to identify the nearest disposal centers,well if you live baltimore you can use our app and get ideas quickly
 
 ## link to streamlit :
 
