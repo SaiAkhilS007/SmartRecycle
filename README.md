@@ -127,12 +127,9 @@ This feature provides personalized YouTube video suggestions to help users creat
 
 ### **How It Works**
 1. **Reuse Recommendations**:
-   - Users receive the **top 3 YouTube videos** for creative reuse ideas (e.g., DIY crafts, upcycling projects) by entering keywords relevant to the waste type.
+   - Users receive the **top 3 YouTube video recommendations** for creative reuse or recycle ideas 
 
-2. **Recycle Recommendations**:
-   - Provides videos explaining proper recycling techniques specific to the waste category.
-
-3. **Personalized Ranking**:
+2. **Personalized Ranking**:
    - Video suggestions are ranked using **cosine similarity** or **Euclidean similarity**, ensuring the most relevant and practical recommendations for users.
 
 ## 📍 Overview of Drop-Off Locations & Data Preparation
@@ -142,7 +139,6 @@ This feature helps users find the nearest drop-off locations for waste disposal 
 ### **How It Works**
 1. **Categorized Database**:
    - Drop-off locations are pre-categorized based on waste types (e.g., e-waste, medical waste, recyclable items).
-   - Data includes details like name, address, phone number, coordinates (latitude, longitude), and working hours.
 
 2. **User Location Matching**:
    - Users provide their zip code, and the **Google Maps API** is used to convert the zip code into geographical coordinates.
