@@ -4,4 +4,5 @@ googlemaps
 geopy
 requests
 pillow
+scikit-learn
 numpy
