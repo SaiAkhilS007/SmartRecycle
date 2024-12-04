@@ -95,7 +95,7 @@ if "radius" not in st.session_state:
     st.session_state.radius = 10  # Default radius in miles
 
 # Set up the app layout
-st.title("🌍 SmartRecycle 🌍 - AI-Powered Waste Management System")
+st.title("🌍 AI-Powered Waste Management System")
 uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
