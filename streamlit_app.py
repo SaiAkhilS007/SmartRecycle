@@ -12,8 +12,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from geopy.distance import geodesic
 from sklearn.neighbors import NearestNeighbors
 
-# Ensure CUDA is disabled (for running without GPU)
+# Force TensorFlow to use CPU
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 
 # Set page configuration
 st.set_page_config(
@@ -24,6 +25,7 @@ st.set_page_config(
 
 # API Keys
 google_api_key = "AIzaSyANESeNA-wRkwU3XIDekR2gLaQ63cEeVos"
+custom_search_engine_id = "c784b70b531b748dc"
 youtube_api_key = "AIzaSyCWGmxXEGYDvNYwOs2lNG8hZKMpmUGhfcY"
 gmaps = googlemaps.Client(key=google_api_key)
 
@@ -35,7 +37,49 @@ feature_extractor = ResNet50(weights="imagenet", include_top=False, pooling="avg
 categories = ['cardboard', 'plastic', 'glass', 'medical', 'paper',
               'e-waste', 'organic_waste', 'textiles', 'metal', 'Wood']
 
-# Session state to manage intents
+# Load the trained classification model
+model = load_model(CLASSIFIER_MODEL_PATH)
+
+# Load ResNet50 feature extractor
+feature_extractor = ResNet50(weights="imagenet", include_top=False, pooling="avg")
+
+
+def fetch_top_youtube_videos(waste_category, intent):
+    query = f"{waste_category} {intent} tutorial"
+    url = f"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q={query}&type=video&key={youtube_api_key}"
+    try:
+        response = requests.get(url)
+        results = response.json().get("items", [])
+        return [
+            {
+                "title": item["snippet"]["title"],
+                "link": f"https://www.youtube.com/watch?v={item['id']['videoId']}",
+                "thumbnail": item["snippet"]["thumbnails"]["medium"]["url"],
+            }
+            for item in results
+        ]
+    except Exception as e:
+        return []
+
+
+def fetch_nearby_locations(user_location, waste_category, intent, radius):
+    intent_keyword = {"reuse": "donation center", "recycle": "recycling center", "disposal": "disposal center"}.get(intent, "")
+    keyword = f"{waste_category} {intent_keyword}"
+    try:
+        places = gmaps.places_nearby(location=user_location, radius=radius, keyword=keyword)
+        return [
+            {
+                "name": place["name"],
+                "address": place["vicinity"],
+                "distance": geodesic(user_location, (place["geometry"]["location"]["lat"], place["geometry"]["location"]["lng"])).miles,
+            }
+            for place in places.get("results", [])[:3]
+        ]
+    except Exception as e:
+        return []
+
+
+# Set up session state for intent, PIN code, and radius
 if "intent" not in st.session_state:
     st.session_state.intent = None
 if "predicted_category" not in st.session_state:
@@ -147,25 +191,19 @@ if uploaded_image:
 
     # Handle intent actions
     if st.session_state.intent in ["reuse", "recycle"]:
-        st.subheader("Provide Keywords for Suggestions:")
-        st.session_state.keyword_input = st.text_input("Enter keywords:", value=st.session_state.keyword_input)
-        if st.button("Get Recommendations"):
-            user_input = st.session_state.keyword_input
-            query = f"{st.session_state.predicted_category} {user_input}"
-            recommendations = fetch_youtube_videos(query, st.session_state.intent)
-            if recommendations:
-                for rec in recommendations:
-                    st.markdown(
-                        f"""
-                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <img src="{rec['thumbnail']}" alt="Video Thumbnail" style="width: 120px; height: 90px; margin-right: 10px;">
-                            <a href="{rec['link']}" target="_blank">{rec['title']}</a>
-                        </div>
-                        """,
-                        unsafe_allow_html=True,
-                    )
-            else:
-                st.write("No recommendations found.")
+        videos = fetch_top_youtube_videos(category, st.session_state.intent)
+
+        st.subheader("🎥 Video Tutorials:")
+        for video in videos:
+            st.markdown(
+                f"""
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="{video['thumbnail']}" alt="Video Thumbnail" style="width: 120px; height: 90px; margin-right: 10px;">
+                    <a href="{video['link']}" target="_blank">{video['title']}</a>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
     elif st.session_state.intent == "disposal":
         st.subheader("Provide Location for Nearby Centers:")
