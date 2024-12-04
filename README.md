@@ -7,17 +7,14 @@
 ## Introduction
 The lack of accessible tools for segregating waste and finding immediate recycling or reuse solutions leaves individuals unaware of simple steps they can take. Additionally, locating nearby drop-off points for waste types like organic, e-waste, and medical waste remains challenging. The absence of a platform that connects users with disposal facilities and provides instant reuse or recycling ideas inspired us to create a solution for better waste management practices.
 ### Objective
-- Use Traditional ML models, Ensemble models and Deep Learning Models to classify waste images into categories like plastic, metal, or organic categories.
-- Provide recycling suggestions, reuse ideas, and safe disposal methods for hazardous or non-recyclable waste.
-- Suggest nearby recycling centers or drop-off points using geolocation and mapping tools.
-## Research Questions
-- Research Question 1: How can image classification models be optimized to accurately categorize waste into distinct categories for better waste management 
-  practices?
-- Research Question 2: How can location-based services and predictive models be integrated to suggest optimal waste disposal options based on user location and 
-  waste type?
+- ### 🎯 Objective of the Project
+
+The objective of this project is to develop an AI-powered system that simplifies waste management by classifying waste images, providing personalized reuse or recycling recommendations, and guiding users to the nearest drop-off locations. It aims to reduce environmental impact, and make waste disposal more accessible and user-friendly.
+
 ## Data Source
 Data set has been downloaded from this URL titled "ImageNet" : https://www.image-net.org/index.php
-- **Main categories chosen(Images)**
+
+- **Different Categories Of Waste Selected**
   1) *Wood*
   2) *cardboard*
   3) *e-waste*
@@ -122,7 +119,6 @@ The following graphs illustrate the training and validation accuracy and loss ov
 
 ---
 
-**Conclusion**: ResNet is the most reliable and accurate model for our project, effectively balancing training and validation performance.
 
 
 ## 🎥 YouTube Recommendations for Reuse or Recycle
@@ -131,12 +127,9 @@ This feature provides personalized YouTube video suggestions to help users creat
 
 ### **How It Works**
 1. **Reuse Recommendations**:
-   - Users receive the **top 3 YouTube videos** for creative reuse ideas (e.g., DIY crafts, upcycling projects) by entering keywords relevant to the waste type.
+   - Users receive the **top 3 YouTube video recommendations** for creative reuse or recycle ideas 
 
-2. **Recycle Recommendations**:
-   - Provides videos explaining proper recycling techniques specific to the waste category.
-
-3. **Personalized Ranking**:
+2. **Personalized Ranking**:
    - Video suggestions are ranked using **cosine similarity** or **Euclidean similarity**, ensuring the most relevant and practical recommendations for users.
 
 ## 📍 Overview of Drop-Off Locations & Data Preparation
@@ -146,7 +139,6 @@ This feature helps users find the nearest drop-off locations for waste disposal 
 ### **How It Works**
 1. **Categorized Database**:
    - Drop-off locations are pre-categorized based on waste types (e.g., e-waste, medical waste, recyclable items).
-   - Data includes details like name, address, phone number, coordinates (latitude, longitude), and working hours.
 
 2. **User Location Matching**:
    - Users provide their zip code, and the **Google Maps API** is used to convert the zip code into geographical coordinates.
@@ -172,6 +164,18 @@ helping end-users access recycling and reuse ideas more effectively while promot
 ### 3. Expanding Geographic Coverage for Drop-Off Locations
 Currently, drop-off location recommendations are region-specific(Baltimore). Expanding the database to include global locations will make the system more universally applicable, helping users worldwide to find the nearest waste disposal facilities.
 
+## 🏁 Conclusion
+
+Our project successfully demonstrates how AI-powered solutions can simplify waste management by combining deep learning models, location-based services, and personalized recommendations. With **94% test accuracy using ResNet**, the system accurately classifies waste into predefined categories. It empowers users with creative reuse ideas, proper recycling methods, and guidance to nearby disposal facilities.
+
+This project is a step toward promoting sustainable practices and reducing environmental impact. By making waste disposal and recycling more accessible and user-friendly, we hope to inspire individuals and communities to take meaningful actions for a cleaner and greener future.
+
+## How to use the product(Stream lit)?
+
+- Upload single piece of waste and only a single image picture
+- Click on either reuse,recycle or disposal
+- Give the Zipcode of the area you want to dispose the product
+### Note : Only upload a single image category/piece of waste for the best results
 
 
 
