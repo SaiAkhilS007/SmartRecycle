@@ -72,6 +72,8 @@ def calculate_cosine_similarity(user_input, video_details):
     texts = [f"{v['title']}" for v in video_details]
     texts.append(user_input.lower())
     vectorizer = TfidfVectorizer(stop_words='english')
+
+
     tfidf_matrix = vectorizer.fit_transform(texts)
     similarities = cosine_similarity(tfidf_matrix[-1], tfidf_matrix[:-1])
     return similarities.flatten()
@@ -115,6 +117,20 @@ if "predicted_category" not in st.session_state:
 if "keyword_input" not in st.session_state:
     st.session_state.keyword_input = ""
 
+import math
+
+def haversine(lat1, lon1, lat2, lon2):
+    # Convert latitude and longitude from degrees to radians
+    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
+
+    # Haversine formula
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    R = 3958.8  # Radius of Earth in miles
+    return R * c
+
 def find_nearest_drop_off_location(zip_code, category, radius):
     # Get coordinates of the user's ZIP code
     user_lat, user_lng = get_coordinates_from_zip(zip_code)
@@ -146,17 +162,23 @@ def find_nearest_drop_off_location(zip_code, category, radius):
         # Return the nearest locations
         nearest_locations = []
         for idx in indices[0]:
+            # Calculate distance using the Haversine formula
+            distance_in_miles = haversine(user_lat, user_lng, filtered_locations.iloc[idx]["latitude"], filtered_locations.iloc[idx]["longitude"])
+            
+            if distance_in_miles > 70:  # Check if distance is greater than 70 miles
+                st.write("Oops!")
+                return []
+
             nearest_locations.append({
                 "name": filtered_locations.iloc[idx]["name"],
                 "address": filtered_locations.iloc[idx]["address"],
-                "distance": distances[0][list(indices[0]).index(idx)]  # Distance to the drop-off location
+                "distance": round(distance_in_miles, 2)  # Distance to the drop-off location in miles
             })
 
         return nearest_locations
     else:
         st.write("Drop-off locations data is not available.")
         return []
-
 
 # Main App
 st.title("🌍 SmartRecycle 🌍")
